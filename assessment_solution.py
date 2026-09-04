@@ -38,16 +38,7 @@ def add_student():
     student_list.append(student_data)
     print("Student Added Successfully")
 
-# View Student Function Creation:
-def view_student():
-    if not student_list:
-        print("No Student's Data Available")
-        return
-
-    for student in student_list:
-        print(student)
-
-'''
+# View Student Marks:
 def view_marks():
     student_id = input("Enter Student Id: ")
     for student in student_list:
@@ -56,7 +47,8 @@ def view_marks():
             return
     print("Student Not Found")
 
-'''
+
+# View Grade:
 def grade_marks():
     if not student_list:
         print("No student records available.")
@@ -74,8 +66,7 @@ def search_student():
             print(student)
             return
     print("Student Not Found")
-
-
+# Stendent Information Deletion Process:
 # Delete Student:
 def delete_student():
     student_id = input("Enter Student Id: ")
@@ -90,22 +81,22 @@ def delete_student():
             return
     print("Student Not Found")
 
-
+# validation Process:
 while True:
     print('Student Management System: ')
     print('''
-    1. Add Student
-    2. View Student
-    3. Search Student
-    4. View Grade
-    5. Delete student
-    6. Exit
+1. Add Student
+2. View Student
+3. Search Student
+4. View Grade
+5. Delete student
+6. Exit
     ''')
     option = input("Enter your choice: ")
     if option == '1':
         add_student()
     elif option == '2':
-        view_student()
+        view_marks()
     elif option == '3':
         search_student()
     elif option == '4':
@@ -113,6 +104,7 @@ while True:
     elif option == '5':
         delete_student()
     elif option == '6':
+        print("Exiting the program...")
         break
     else:
         print("Invalid option. Please try again.")
